@@ -1,0 +1,136 @@
+:root {
+    --bg: #0f172a;
+    --sidebar: #111827;
+    --card: #1e293b;
+    --accent: #38bdf8;
+    --text: #f1f5f9;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+.app-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 500px;
+    background: var(--sidebar);
+    padding: 25px;
+    border-right: 1px solid #334155;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.filter-group {
+    margin-bottom: 22px;
+}
+
+.filter-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 13px;
+    color: #94a3b8;
+    font-weight: 600;
+}
+
+.selection-box {
+    background: #1e293b;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.search-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--accent);
+    color: var(--bg);
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-btn:hover {
+    background: #7dd3fc;
+    transform: scale(1.02);
+}
+
+/* Main Content */
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+}
+
+.product-flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    background: var(--card);
+    flex: 0 1 240px;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #334155;
+    text-align: center;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.product-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.badges {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.badge {
+    background: #334155;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.badge-status {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+.price {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--accent);
+    margin: 10px 0;
+}

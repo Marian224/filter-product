@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech-X Ultimate Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app-container">
+        <aside class="sidebar">
+            <h2>Фільтри</h2>
+
+            <div class="filter-group">
+                <label>Пошук моделі</label>
+                <input type="text" id="nameFilter" placeholder="Наприклад: iPhone...">
+            </div>
+
+            <div class="filter-group">
+                <label>Бренд</label>
+                <div class="selection-box">
+                    <label><input type="radio" name="brand" value="all" checked> Всі</label>
+                    <label><input type="radio" name="brand" value="Apple"> Apple</label>
+                    <label><input type="radio" name="brand" value="Samsung"> Samsung</label>
+                </div>
+            </div>
+
+            <!-- <div class="filter-group">
+                <label>Об'єм пам'яті</label>
+                <div class="selection-box">
+                    <label><input type="checkbox" class="memory-filter" value="128GB"> 128 GB</label>
+                    <label><input type="checkbox" class="memory-filter" value="256GB"> 256 GB</label>
+                    <label><input type="checkbox" class="memory-filter" value="512GB"> 512 GB</label>
+                </div>
+            </div> -->
+
+            <div class="filter-group">
+                <label>Колір корпусу</label>
+                <div class="selection-box">
+                    <label><input type="checkbox" class="color-filter" value="Titanium"> Titanium</label>
+                    <label><input type="checkbox" class="color-filter" value="Space Black"> Space Black</label>
+                    <label><input type="checkbox" class="color-filter" value="Silver"> Silver</label>
+                    <label><input type="checkbox" class="color-filter" value="Blue"> Blue</label>
+                </div>
+            </div>
+
+            <!-- <div class="filter-group">
+                <label>Стан пристрою</label>
+                <select id="statusFilter">
+                    <option value="all">Будь-який</option>
+                    <option value="New">Новий (New)</option>
+                    <option value="Refurbished">Відновлений (Ref)</option>
+                </select>
+            </div> -->
+
+            <div class="filter-group">
+                <label>Макс. ціна: $<span id="priceValue">2500</span></label>
+                <input type="range" id="priceFilter" min="100" max="2500" step="100" value="2500">
+            </div>
+
+            <button id="findBtn" class="search-btn">Застосувати</button>
+        </aside>
+
+        <main class="main-content">
+            <header>
+                <h1>Гаджети в наявності (<span id="count">0</span>)</h1>
+            </header>
+            <div id="productGrid" class="product-flex-grid">
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
